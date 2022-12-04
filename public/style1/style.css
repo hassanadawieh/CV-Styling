@@ -1,3 +1,158 @@
-body{
-    background: red;
+html{
+    display: flex;
+    justify-content: center;
 }
+
+body{
+    max-width: 1200px;
+   position: relative;
+}
+
+header{
+    background: rgb(177, 166, 166);
+}
+
+
+header div{
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width: 50%;
+}
+
+.content{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+h1,h2{
+    color: red;
+}
+
+h3{
+    border-bottom: 2px solid gray;
+}
+
+.contact-type{
+    padding: 3px;
+    margin: 0;
+    width: 25%;
+    background: red;
+    color: white;
+}
+
+.contacts{
+width: 50%;
+position:absolute;
+top: 10px;
+right: 0;
+background: black;
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+}
+
+.contact-value{
+    padding: 3px;
+    margin: 0;
+    color: red;
+}
+
+.contact{
+    margin: 0;
+}
+
+h3::before{
+    content:"\1F534";
+    
+    color: red;
+}
+
+h4 .experience-institution::before{
+    content: "@";
+    color: red;
+}
+
+h4{
+    color: red;
+}
+
+.experience-date-separator{
+    color: red;
+}
+
+#contact h3{
+    display: none;
+}
+
+.skills-primary::before{
+    content: "Main";
+}
+
+.skills-secondary::before{
+    content: "Other";
+    
+}
+
+.skill{
+    width: 100%;
+    background-color: rgb(192, 185, 185);
+   margin-top:2px;
+    
+}
+
+.skill > span{
+    color:white;
+    
+    display: flex;
+    background-color: red;
+}
+
+.skill[data-skill="5"] span{
+    width: 50%;
+}
+
+.skill[data-skill="3"] span{
+    width: 30%;
+}
+
+.skill[data-skill="1"] span{
+    width: 10%;
+}
+
+.skill[data-skill="9"] span{
+    width: 90%;
+}
+
+.skill[data-skill="7"] span{
+    width: 70%;
+}
+
+@media only screen and (max-width: 992px) {
+    body{
+        max-width: 992px;
+       position: relative;
+    }
+
+.content{
+  display: block;
+}
+
+.contacts{
+width: 100%;
+position:relative;
+top: 10px;
+
+background: black;
+}
+#contact h3{
+    display: block;
+}
+  }
