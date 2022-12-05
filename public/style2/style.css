@@ -1,0 +1,292 @@
+html{
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    max-width: 1200px;
+    position: relative;
+    padding: 50px 10%;
+}
+
+#about h3 ,h2 ,h4 .experience-institution{
+    display: none;
+}
+
+header div{
+    grid-template-columns: 2fr 1fr;
+    max-width: 100%;
+}
+
+#about p{
+    margin-bottom: 150px;
+    width: 65%;
+    padding-left: 10px;
+}
+
+h1{
+    border-bottom: 2px solid black;
+    padding: 20px;
+    width: 100%;
+}
+
+header div img{
+    transform: rotate(-15deg);
+    width: 200px;
+    position: absolute;
+    right: 15%;
+    top: 30px;
+}
+
+#competencies{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    
+}
+
+.skills{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.skill {
+    margin: 2px;
+    background-color: darkcyan;
+    color: white;
+    padding: 10px 5px;
+    width: 90%;
+    grid-row:1;
+}
+
+.skill[data-skill="5"]::after {
+    content: "★★★";
+    float: right;
+}
+
+.skill[data-skill="6"]::after {
+    content: "★★★";
+    float: right;
+}
+
+.skill[data-skill="3"]::after {
+    content: "★★";
+    float: right;
+}
+
+.skill[data-skill="1"]::after {
+    content: "★";
+    float: right;
+}
+
+.skill[data-skill="9"]::after {
+    content: "★★★★★";
+    float: right;
+}
+
+.skill[data-skill="7"]::after {
+    content: "★★★★";
+    float: right;
+}
+
+.skills-primary .skill {
+    font-size: 18px;
+}
+
+.skills-secondary .skill {
+    font-size: 12px;
+}
+
+#competencies {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.experience-details{
+    color: rgb(194, 178, 158);
+}
+
+h4{
+    color: rgb(82, 166, 180);
+}
+
+.contact-type{
+    display: none;
+}
+#contact>h3{
+    display: none;
+}
+.contact-type{
+    display: none;
+} 
+.contact{
+    width: 100px;
+    height: 100px;
+    display: flex;
+
+}
+.contact>dd{
+    width:100%;
+    height: 100%;
+    margin-left: 0;
+    display: flex;
+}
+.contact-skype{
+    display: none;
+}
+.contact-github>dd>a{
+    background-image: url(/public/images/github.png);
+    background-size: 100px 100px;
+    width:100%;
+    height: 100%;
+    color: transparent;
+}
+.contact-facebook>dd>a{
+    background-image: url(/public/images/facebook.png);
+    background-size: 100px 100px;
+    width:100%;
+    height: 100%;
+    color: transparent  ;
+}
+.contact-email>dd>a{
+    background-image: url(/public/images/email.png);
+    background-size: 100px 100px;
+    width:100%;
+    height: 100%;
+    color: transparent  ;
+}
+.contacts{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.contact-phone>dd>a{
+    background-image: url(/public/images/phone.png);
+    background-size: 100px 100px;
+    width:100%;
+    height: 100%;
+    color: transparent  ;
+}
+.contacts{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: auto 350px auto 150px;
+    }
+section:not(#about, #contact){
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-auto-rows: auto;
+    margin-bottom: 50px;
+}
+section h3{
+    grid-column: 1;
+    margin-top: 0px;
+    border-right: 2px solid rgb(194, 178, 158);
+    grid-row: 1/3;
+    margin: 0;
+}
+.skills{
+    grid-column: 2/6;
+    margin-left: 20px;
+}
+.experience {
+    grid-column: 2/8;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(5,1fr);
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+}
+.experience h4{
+    grid-column: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.experience-details{
+    grid-column: 2;
+    align-self: center;
+    justify-self: right;
+    margin-bottom: 0px;
+    margin-top: 0;
+}
+.experience-description{
+    grid-column: 1/3;
+    grid-row:2/6 ;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+@media only screen and (max-width: 992px) {
+    #about h3 ,h2 ,h4 .experience-institution{
+        display: none;
+    }
+    
+    header div{
+        
+        max-width: 992px;
+    }
+    
+    #about p{
+        margin-bottom: 150px;
+        max-height: 992px;
+        
+    }
+    
+    header div img{
+      display: none;
+    }
+    
+    #competencies{
+        display: block;
+        
+    }
+    
+    #contact>h3{
+        display: none;
+    }
+    
+    .skill {
+        max-width: 992px;
+    }
+
+    .contact>dd{
+        width:100%;
+        height: 100%;
+        margin-left: 0;
+        display: flex;
+    }
+
+    .contact-skype{
+        display: none;
+    }
+
+    .contacts:not(.contact-facebook){
+            display: flex; 
+            flex-direction: row;
+            justify-content: space-between;
+            margin: auto auto auto auto;
+            margin-bottom: 0;
+            justify-content: center;
+            grid-row: auto;
+        }
+
+    #contact{
+        display: flex;
+    }
+
+    section:not(#about ){
+        display: block;
+        margin-bottom: 50px;
+    }
+
+    section h3{
+        border-right: none;
+        margin-top: 0px;
+        margin-left: 20px;
+        border-bottom: 2px solid black;
+        width: 30%;
+        margin-bottom: 20px;
+        
+    }
+}
