@@ -1,0 +1,138 @@
+html{
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    max-width: 1200px;
+   position: relative;
+}
+
+header{
+    background: rgb(136, 12, 12);
+}
+
+header div{
+    margin-left: 10px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width: 100%;
+}
+
+img{
+    width: 110px;
+    height: 110px;
+
+}
+
+#competencies{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    
+}
+
+.skills{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.skill {
+    margin: 2px;
+    background-color:rgb(136, 12, 12);
+    color: white;
+    padding: 10px 5px;
+    width: 90%;
+    grid-row:1;
+}
+
+.skill[data-skill="5"]::after {
+    content: "★★★";
+    float: right;
+}
+
+.skill[data-skill="6"]::after {
+    content: "★★★";
+    float: right;
+}
+
+.skill[data-skill="3"]::after {
+    content: "★★";
+    float: right;
+}
+
+.skill[data-skill="1"]::after {
+    content: "★";
+    float: right;
+}
+
+.skill[data-skill="9"]::after {
+    content: "★★★★★";
+    float: right;
+}
+
+.skill[data-skill="7"]::after {
+    content: "★★★★";
+    float: right;
+}
+
+.skills-primary .skill {
+    font-size: 18px;
+}
+
+.skills-secondary .skill {
+    font-size: 12px;
+}
+
+#competencies {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.experience-details{
+    color: rgb(194, 178, 158);
+}
+
+h4{
+    color: rgb(136, 12, 12);
+}
+.contact-type{
+    padding: 3px;
+    margin: 0;
+    width: 25%;
+    background:rgb(136, 12, 12);
+    color: white;
+}
+.contacts{
+    width: 100%;
+    top: 10px;
+    right: 0;
+    background: rgb(194, 178, 158);
+    }
+    
+    .contact{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    a{
+        text-decoration: none;
+        color: rgb(136, 12, 12);
+    }
+    
+    .contact-value{
+        padding: 3px;
+        margin: 0;
+        color: rgb(136, 12, 12);
+    }
+    
+    .contact{
+        margin: 0;
+    }
+    @media only screen and (max-width: 992px) {
+        .contact-value{
+           padding-left:35% ;
+        }
+    }
+
+    
